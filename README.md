@@ -18,4 +18,4 @@ Library with useful C# classes and thingies
 ```csharp
 Bitmap qr = QRcode.createQRCode("Tool123");
 QRcode.Print(qr, "Tool 123");
-bool succes = QRcode.Save(qr, @"C:\Photos\Tool123", "QR.jpg");
+bool success = QRcode.Save(qr, @"C:\Photos\Tool123", "QR.jpg");
