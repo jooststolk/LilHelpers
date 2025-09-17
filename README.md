@@ -11,7 +11,7 @@ Library with useful C# classes and thingies
 ## Features
 - `createQRCode(string data)`: Generates a QR bitmap
 - `Print(Image qrImage, string headerText)`: Prints QR with centered header
-- `Save(Image qrImage, string folderPath, string filePath)`: Saves QR as JPEG
+- `Save(Image qrImage, string folderPath, string fileName)`: Saves QR as JPEG
 
 ## Example Usage
 
