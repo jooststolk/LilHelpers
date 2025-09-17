@@ -98,6 +98,7 @@ namespace Tools.ClassLibrary
             {
                 MessageBox.Show("Error saving QR code: " + ex.Message, "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 //Or brew your own and add logging etc.
+                return false;
             }
              return true;
         }
