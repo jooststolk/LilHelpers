@@ -63,11 +63,12 @@ namespace Tools.ClassLibrary
             e.Graphics.DrawImage(qrImage, new Rectangle(imgX, imgY, imgWidth, imgHeight));
         }
 
-        public static void Save(Image qrImage, string folderPath, string fileName)
+        public static bool Save(Image qrImage, string folderPath, string fileName)
         {
-            if (qrImage == null)
+            if (qrImage == null || Substring(fileName.Length - 4)!=".jpg")
             { 
-                return;
+                //maybe let user know?
+                return false;
             }
 
             try
@@ -98,6 +99,7 @@ namespace Tools.ClassLibrary
                 MessageBox.Show("Error saving QR code: " + ex.Message, "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 //Or brew your own and add logging etc.
             }
+             return true;
         }
     }
 }
