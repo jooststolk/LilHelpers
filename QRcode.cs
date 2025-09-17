@@ -63,7 +63,7 @@ namespace Tools.ClassLibrary
             e.Graphics.DrawImage(qrImage, new Rectangle(imgX, imgY, imgWidth, imgHeight));
         }
 
-        public static void Save(Image qrImage, string folderPath, string filePath)
+        public static void Save(Image qrImage, string folderPath, string fileName)
         {
             if (qrImage == null)
             { 
@@ -76,7 +76,7 @@ namespace Tools.ClassLibrary
                 {
                     Directory.CreateDirectory(folderPath);
                 }
-
+                filePath=folderPath+"\"+fileName;
                 using (MemoryStream ms = new MemoryStream())
                 {
                     qrImage.Save(ms, ImageFormat.Bmp);
